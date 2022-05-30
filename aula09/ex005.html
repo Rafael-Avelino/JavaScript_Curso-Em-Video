@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            background-color: rgb(0, 8, 24);
+            color:whitesmoke;
+            font: normal 17pt times new roman;
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar <strong> DOM </strong> em JavaScript</p>
+    <div class='msg'>Clique em mim</div>
+    <script>
+        
+        /*
+        var p1 = window.document.getElementsByTagName('p')[1] //acessando 'p' pela tag. Como tem dois 'p', tem que dizer qual é [1]
+        window.document.write(p1.innerText) // pedindo pra escrever o texto de p1
+        p1.style.color = 'red'
+        document.write(p1.innerHTML) // pedindo para escrever o HTML de p1 (texto com as formatações)
+        */
+
+        /*
+        var corpo = document.body //
+        corpo.style.background = 'black' 
+        */
+        
+        /*
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green' // mudando a cor de fundo de d (div) para verde
+        d.innerText = 'Estou aguardando' // mudando o texto de 'd', sendo 'd' a div de ID 'msg'
+        */
+        
+        /* 
+        var d = window.document.getElementsByName('msg')[0] //seleção da div com nome 'msg'
+        d.innerText = 'olá' //alteração do texto da div
+        */
+
+        /*
+        var d = window.document.getElementsByClassName('msg')[0]
+        d.innerHTML = 'Alô'
+        */
+        
+        var d = window.document.querySelector('div.msg') // acessando por seletor. '#' para ID e '.' para class
+        d.style.color = 'blue'
+    </script>
+</body>
+</html>

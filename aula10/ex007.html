@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <style>
+    body{
+        background-color: rgb(1, 1, 46);
+        color: whitesmoke;
+        font: normal 15pt times new roman;
+
+    }   
+
+    input{
+        font: normal 15pt times new roman;
+        width: 120px;
+    }
+
+    div#res{
+        margin-top: 20px; /* dando espaço do resultado*/
+    }
+    </style>
+</head>
+<body>
+    <h1>Calculadora mal feita</h1>
+    <input type="number" name="txt1" id="txt1"> 
+    <input type="number" name="txt2" id="txt2">
+    <input type="button" value="Somar" onclick="somar()">
+    <input type="button" value="Subtrair" onclick="subtrair()">
+    <input type="button" value="Multiplicar" onclick="multiplicar()">
+    <input type="button" value="Dividir" onclick="dividir()">
+    <div id="res">Resultado:</div>
+
+    <script>
+        function somar(){
+            var t1 = window.document.querySelector('input#txt1')
+            var t2 = window.document.querySelector('input#txt2')
+            var res = window.document.querySelector('div#res')
+
+            var n1 = Number(t1.value)
+            var n2 = Number(t2.value)
+
+            var soma = n1 + n2
+
+            res.innerHTML = `A soma entre os números "${n1}" e "${n2}" é igual a ${soma}.`
+
+            
+        }
+
+        function subtrair(){
+            var t1 = window.document.querySelector('input#txt1')
+            var t2 = window.document.querySelector('input#txt2')
+            var res = window.document.querySelector('div#res')
+
+            var n1 = Number(t1.value)
+            var n2 = Number(t2.value)
+
+            var sub = n1 - n2
+
+            res.innerHTML = `A subtração entre os números "${n1}" e "${n2}" é igual a ${sub}.`
+
+        }
+
+        function multiplicar(){
+            var t1 = window.document.querySelector('input#txt1')
+            var t2 = window.document.querySelector('input#txt2')
+            var res = window.document.querySelector('div#res')
+
+            var n1 = Number(t1.value)
+            var n2 = Number(t2.value)
+
+            var mult = n1 * n2
+
+            res.innerHTML = `A multiplicação entre os números "${n1}" e "${n2}" é igual a ${mult}.`
+        }
+
+        function dividir(){
+            var t1 = window.document.querySelector('input#txt1')
+            var t2 = window.document.querySelector('input#txt2')
+            var res = window.document.querySelector('div#res')
+
+            var n1 = Number(t1.value)
+            var n2 = Number(t2.value)
+
+            var divid = n1 / n2
+
+            res.innerHTML = `A divisão entre os números "${n1}" e "${n2}" é igual a ${divid}.`
+        }
+    </script>
+</body>
+</html>
